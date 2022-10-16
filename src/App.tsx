@@ -2,6 +2,7 @@ import { ClipboardText } from "phosphor-react";
 import { Button } from "./components/Button";
 import { Header } from "./components/Header";
 import { Input } from "./components/Input";
+import { Task } from "./components/Task";
 
 function App() {
   return (
@@ -29,12 +30,20 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="w-full mt-6 border-t border-gray-400 rounded flex-col justify-center items-center text-center text-gray-300">
+        {/* <div className="w-full mt-6 border-t border-gray-400 rounded flex-col justify-center items-center text-center text-gray-300">
           <ClipboardText size={54} className="mt-16 mx-auto" />
           <p className="mt-4 font-bold">
             Você ainda não tem tarefas cadastradas
           </p>
           <p>Crie tarefas e organize seus itens a fazer</p>
+        </div> */}
+
+        <div className="mt-3 w-full">
+          <Task
+            state="active"
+            content="Integer urna interdum massa libero auctor neque turpis turpis semper.
+        Duis vel sed fames integer."
+          />
         </div>
       </main>
     </div>
