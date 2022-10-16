@@ -7,15 +7,21 @@ interface TaskProps {
   completedTask: boolean;
   content: string;
   onUpdateTask: (id: number) => void;
+  onDeleteTask: (id: number) => void;
 }
 export function Task({
   content,
   completedTask = false,
   onUpdateTask,
   id,
+  onDeleteTask,
 }: TaskProps) {
   function handleCompleteTask() {
     onUpdateTask(id);
+  }
+
+  function handleDeleteTask() {
+    onDeleteTask(id);
   }
   return (
     <div className="w-full bg-gray-500 mt-3 px-4 py-4 text-md rounded-lg flex justify-between items-center">
@@ -34,7 +40,7 @@ export function Task({
           <p className="max-w-[632px]">{content}</p>
         </>
       )}
-      <DeleteButton className="self-start" />
+      <DeleteButton className="self-start" onClick={handleDeleteTask} />
     </div>
   );
 }

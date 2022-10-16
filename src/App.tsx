@@ -50,6 +50,12 @@ function App() {
     });
     setCompletedTasks(seeCompletedTasks.length);
   }
+
+  function handleRemoveTask(id: number) {
+    const queryTask = tasks.filter((task) => task.id !== id);
+    setTasks(queryTask);
+  }
+
   return (
     <div className="font-sans text-gray-100 bg-gray-600 min-h-screen">
       <header className="w-full h-[200px]">
@@ -96,6 +102,7 @@ function App() {
                 completedTask={task.completed}
                 key={task.id}
                 onUpdateTask={() => handleUpdateTaskState(task.id)}
+                onDeleteTask={() => handleRemoveTask(task.id)}
               />
             ))}
           </div>
