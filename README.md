@@ -1,5 +1,5 @@
 ## TODO List Challenge
-#### This was a "simple" to do list sent by rocketseat as a challenge (and it was a challenge indeed). Using React, Tailwind, Typescript, Immutability, Iteration concepts, among other react bases, I managed to complete it after a few hours.
+#### This was a "simple" to do list sent by rocketseat as a challenge (and it was a challenge indeed). Using React, Tailwind, Typescript, concepts of Immutability, Iteration , among other react bases, I managed to complete it after a few hours.
 
 ### Previews
 
